@@ -13,6 +13,11 @@ class EventController extends Controller
     public function index()
     {
         //
+        $events = [[
+            "id" => 1,
+            "content" => "desc"
+        ]];
+        return response()->json($events);
     }
 
     /**

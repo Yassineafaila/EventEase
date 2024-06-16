@@ -12,7 +12,6 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('event_categories', function (Blueprint $table) {
-            $table->id();
             $table->foreignId('event_id')->constrained('events');
             $table->foreignId('category_id')->constrained('categories');
             $table->primary(['event_id', 'category_id']);
