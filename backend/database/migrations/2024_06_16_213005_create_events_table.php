@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->text('description')->nullable();
             $table->string('location')->nullable();
+            $table->string('seats')->nullable();
             $table->dateTime('start_time');
             $table->dateTime('end_time');
             $table->foreignId('organizer_id')->constrained('users');
