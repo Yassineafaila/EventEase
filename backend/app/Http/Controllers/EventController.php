@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use Illuminate\Http\Request;
+use App\Http\Resources\EventResource;
 
 class EventController extends Controller
 {
@@ -13,11 +14,26 @@ class EventController extends Controller
     public function index()
     {
         //
-        $events = [[
-            "id" => 1,
-            "content" => "desc"
-        ]];
-        return response()->json($events);
+        $events = Event::orderBy("created_at", "desc")->paginate(10);
+
+        if ($events->isEmpty()) {
+            return response()->json([
+                'success' => true,
+                'message' => 'No events found.',
+                'data' => [],
+            ]);
+        }
+        return
+            response()->json([
+                'success' => true,
+                'data' => EventResource::collection($events),
+                'pagination' => [
+                    'current_page' => $events->currentPage(),
+                    'per_page' => $events->perPage(),
+                    'total' => $events->total(),
+                    'last_page' => $events->lastPage(),
+                ],
+            ], 200);
     }
 
     /**
@@ -41,7 +57,22 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        //
+        // Find the event by ID
+        $event = Event::find($event->id);
+
+        // Check if the event exists
+        if (!$event) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Event not found.',
+            ], 404); // Return a 404 Not Found status code
+        }
+
+        // Return a JSON response with the event data
+        return response()->json([
+            'success' => true,
+            'data' => new EventResource($event),
+        ]);
     }
 
     /**
@@ -65,6 +96,24 @@ class EventController extends Controller
      */
     public function destroy(Event $event)
     {
-        //
+        // Attempt to find and delete the event
+        $event = Event::find($event->id);
+
+        // Check if the event exists
+        if (!$event) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Event not found.',
+            ], 404); // Return a 404 Not Found status code
+        }
+
+        // Delete the event
+        $event->delete();
+
+        // Return a JSON response indicating success
+        return response()->json([
+            'success' => true,
+            'message' => 'Event deleted successfully.',
+        ]);
     }
 }
