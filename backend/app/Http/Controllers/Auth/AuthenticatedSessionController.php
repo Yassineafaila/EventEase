@@ -9,6 +9,7 @@ use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\Auth\LoginRequest;
+use App\Http\Requests\Auth\LogoutRequest;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -40,14 +41,28 @@ class AuthenticatedSessionController extends Controller
     /**
      * Destroy an authenticated session.
      */
-    public function destroy(Request $request): Response
+    public function destroy(LogoutRequest $request): JsonResponse
     {
-        Auth::guard('web')->logout();
+        // Get the authenticated user
+        $user = $request->user();
 
-        $request->session()->invalidate();
+        // Check if the user is authenticated and has a valid token
+        if ($user) {
+            // Revoke the token that was used to authenticate the current request
+            $token = $user->currentAccessToken();
+            if ($token) {
+                $token->delete();
+            }
+            return response()->json([
+                'success' => true,
+                'message' => 'Logged out successfully.'
+            ]);
+        }
 
-        $request->session()->regenerateToken();
+        return response()->json([
+            'success' => false,
+            'message' => 'Invalid token.'
+        ], 401);
 
-        return response()->noContent();
     }
 }
