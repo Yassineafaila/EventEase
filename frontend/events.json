@@ -1,0 +1,148 @@
+{
+    "events": [
+        {
+            "id": 2,
+            "name": "Unde rerum veniam amet et est totam odit dolorum.",
+            "description": "Eligendi atque doloribus aut quibusdam. Rerum ea consequatur quidem odit at. Aut sed sed qui tenetur.",
+            "location": {
+                "street": "992 Astrid Isle",
+                "city": "West Joefort",
+                "address": "IN 59905"
+            },
+            "seats": 79,
+            "start_time": "2024-07-22 02:43:06",
+            "end_time": "2024-08-28 00:04:15",
+            "organizer_id": "13",
+            "created_at": "2024-07-04 19:05:52",
+            "updated_at": "2024-07-04 19:05:52"
+        },
+        {
+            "id": 3,
+            "name": "Sunt quis accusamus voluptatum perferendis aperiam.",
+            "description": "Et minus voluptates voluptates saepe. Hic inventore id sit consequuntur et repellendus qui doloribus. In reiciendis enim odit ut est.",
+            "location": {
+                "street": "86698 Anissa Lodge Suite 039",
+                "city": "South Juvenalborough",
+                "address": "TX 19437-8376"
+            },
+            "seats": 60,
+            "start_time": "2024-07-18 02:44:24",
+            "end_time": "2024-08-05 10:52:49",
+            "organizer_id": "14",
+            "created_at": "2024-07-04 19:05:52",
+            "updated_at": "2024-07-04 19:05:52"
+        },
+        {
+            "id": 4,
+            "name": "Adipisci non eos ut iure fugiat aperiam.",
+            "description": "Incidunt tempore laudantium quod a voluptas quas. Dignissimos sed exercitationem et odio saepe cupiditate et. Ea sapiente quis quaerat non.",
+            "location": {
+                "street": "5061 Blair Mount",
+                "city": "Port Justen",
+                "address": "WV 76956"
+            },
+            "seats": 73,
+            "start_time": "2024-08-04 02:55:29",
+            "end_time": "2024-09-01 18:28:48",
+            "organizer_id": "15",
+            "created_at": "2024-07-04 19:05:52",
+            "updated_at": "2024-07-04 19:05:52"
+        },
+        {
+            "id": 5,
+            "name": "Deserunt cumque earum cumque non fugit amet.",
+            "description": "Consequatur necessitatibus nam voluptatibus quis. Esse et ut atque numquam natus ducimus animi aliquid. Repellendus rerum ut maxime distinctio ut. Distinctio voluptatibus aut nemo reiciendis rerum pariatur.",
+            "location": {
+                "street": "72231 Ernser Station Suite 828",
+                "city": "Lake Destineeshire",
+                "address": "ND 25937"
+            },
+            "seats": 73,
+            "start_time": "2024-08-04 05:13:14",
+            "end_time": "2024-08-08 15:09:57",
+            "organizer_id": "16",
+            "created_at": "2024-07-04 19:05:52",
+            "updated_at": "2024-07-04 19:05:52"
+        },
+        {
+            "id": 6,
+            "name": "Eos nulla repellat neque nostrum ea iusto libero.",
+            "description": "Id quidem quis explicabo maiores similique. Nulla id blanditiis consequuntur molestias et. A earum error similique repellendus.",
+            "location": {
+                "street": "4671 Bradtke Row",
+                "city": "Reggieton",
+                "address": "GA 87351-9194"
+            },
+            "seats": 75,
+            "start_time": "2024-07-24 14:30:59",
+            "end_time": "2024-08-27 08:47:08",
+            "organizer_id": "17",
+            "created_at": "2024-07-04 19:05:52",
+            "updated_at": "2024-07-04 19:05:52"
+        },
+        {
+            "id": 7,
+            "name": "Voluptatem aut similique nihil natus eligendi.",
+            "description": "Facilis quo aliquam doloribus ut consequuntur. Expedita possimus quidem doloremque consequatur voluptatem. Dolorem et voluptate necessitatibus dolore. Veritatis ab doloribus qui molestiae vero.",
+            "location": {
+                "street": "90205 Auer Wells",
+                "city": "New Hillary",
+                "address": "AZ 91842-9885"
+            },
+            "seats": 12,
+            "start_time": "2024-07-12 12:48:37",
+            "end_time": "2024-08-28 16:37:20",
+            "organizer_id": "18",
+            "created_at": "2024-07-04 19:05:52",
+            "updated_at": "2024-07-04 19:05:52"
+        },
+        {
+            "id": 8,
+            "name": "Unde enim saepe doloremque aut temporibus.",
+            "description": "Tempora reiciendis non voluptatem saepe incidunt voluptatibus voluptates. Eveniet non eum ex eaque assumenda. Vel deleniti similique aut ratione non voluptatem cupiditate.",
+            "location": {
+                "street": "297 Heidenreich Mills",
+                "city": "Wilburnshire",
+                "address": "KS 45592"
+            },
+            "seats": 61,
+            "start_time": "2024-07-12 18:57:38",
+            "end_time": "2024-09-03 12:04:42",
+            "organizer_id": "19",
+            "created_at": "2024-07-04 19:05:52",
+            "updated_at": "2024-07-04 19:05:52"
+        },
+        {
+            "id": 9,
+            "name": "Assumenda facere aliquid ut aut sapiente aut consectetur.",
+            "description": "Deleniti consequatur ut commodi iure beatae explicabo nemo. Ut ducimus et delectus numquam ducimus dolor non. Dolores et aut deleniti dolorum natus et ipsum.",
+            "location": {
+                "street": "4698 George Glens",
+                "city": "South Rolando",
+                "address": "AZ 41967-9028"
+            },
+            "seats": 18,
+            "start_time": "2024-08-03 15:12:17",
+            "end_time": "2024-08-23 05:22:45",
+            "organizer_id": "20",
+            "created_at": "2024-07-04 19:05:52",
+            "updated_at": "2024-07-04 19:05:52"
+        },
+        {
+            "id": 10,
+            "name": "Qui nostrum quia adipisci molestias ipsam.",
+            "description": "Vel temporibus maxime in cupiditate nisi. Sit molestias doloremque aliquam nulla.",
+            "location": {
+                "street": "402 Legros Mount",
+                "city": "Hartmannmouth",
+                "address": "VA 84681-4184"
+            },
+            "seats": 97,
+            "start_time": "2024-07-31 22:22:49",
+            "end_time": "2024-08-12 20:43:38",
+            "organizer_id": "21",
+            "created_at": "2024-07-04 19:05:52",
+            "updated_at": "2024-07-04 19:05:52"
+        }
+    ]
+}
