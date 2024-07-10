@@ -14,7 +14,7 @@ function NavBar(): JSX.Element {
     const { user, isLoggedIn } = useAuth()
     console.log(user, isLoggedIn)
     return (
-        <nav className="lg:flex lg:items-center lg:justify-between max-w-[1280px] container mx-auto py-4">
+        <nav className="lg:flex lg:items-center lg:justify-between max-w-[1280px] container mx-auto py-4 ">
             <div>
                 <NavLink to="/"><span>Event</span><span>Ease</span></NavLink>
             </div>

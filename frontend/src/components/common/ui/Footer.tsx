@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='container mx-auto max-w-[1280px]'>
+    <div className='container mx-auto max-w-[1280px] '>
         <div className='border-t-2 border-gray-300 flex flex:col md:flex-row md:justify-between py-5 text-sm'>
       <div className='mb-4'>
         <a href='#' className='mx-2.5'>About</a>
