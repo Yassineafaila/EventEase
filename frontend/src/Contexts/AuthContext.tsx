@@ -11,6 +11,7 @@ interface AuthContextType {
     user: User | null;
     isLoggedIn:boolean
     signIn: (userData: User) => void;
+    signUp: (userData: User) => void;
     signOut: () => void;
 }
 
@@ -22,7 +23,11 @@ interface AuthProviderProps {
 
 const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
     const [user, setUser] = useState<User | null>(null);
-    const [isLoggedIn,setIsLoggedIn]=useState<boolean>(false)
+    const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false)
+    const signUp = (userData: User) => {
+        setUser(userData)
+        setIsLoggedIn(true)
+    }
 
     const signIn = (userData: User) => {
         setUser(userData);
@@ -35,7 +40,7 @@ const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
     };
 
     return (
-        <AuthContext.Provider value={{ user, isLoggedIn,signIn, signOut }}>
+        <AuthContext.Provider value={{ user, isLoggedIn,signIn, signUp,signOut }}>
             {children}
         </AuthContext.Provider>
     );

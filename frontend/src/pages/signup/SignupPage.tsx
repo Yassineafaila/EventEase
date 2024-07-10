@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Input, Button, InputGroup, InputRightElement,Box,Divider,AbsoluteCenter ,CloseButton} from '@chakra-ui/react'
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Input, Button, InputGroup, InputRightElement} from '@chakra-ui/react'
+import { FaArrowLeft, FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../Contexts/AuthContext';
 function SignupPage() {
@@ -11,7 +11,7 @@ function SignupPage() {
 
   const {signIn}=useAuth()
   
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:React.FormEvent) => {
     e.preventDefault();
     const user = {
       username: username,
@@ -19,6 +19,7 @@ function SignupPage() {
       password:password
     }
     signIn(user)
+    console.log(user)
     console.log("user successfully Signup")
   }
 
@@ -29,7 +30,9 @@ function SignupPage() {
   return (
     <div className='container mx-auto max-w-[1280px]'>
       <form onSubmit={handleSubmit}>
-        <CloseButton />
+        <Button leftIcon={<FaArrowLeft />} colorScheme='teal' variant='solid'>
+          Back
+        </Button>
         <h1>Register</h1>
         <div>
           <Input onChange={(e)=>setUserName(e.target.value)} placeholder='username' type='text' />
