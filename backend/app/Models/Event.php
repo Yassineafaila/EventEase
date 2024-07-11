@@ -15,7 +15,9 @@ class Event extends Model
         'name',
         'description',
         'seats',
-        'location',
+        'city',
+        'street',
+        'address',
         'start_time',
         'end_time',
         'organizer_id',
@@ -23,6 +25,16 @@ class Event extends Model
     protected $dates = [
         'start_time', 'end_time', // Specify date attributes
     ];
+    protected $appends = ['location'];
+
+    public function getLocationAttribute()
+    {
+        return [
+            'city' => $this->city,
+            'street' => $this->street,
+            'address' => $this->address
+        ];
+    }
 
     /**
      * Get the user who organized this event.
