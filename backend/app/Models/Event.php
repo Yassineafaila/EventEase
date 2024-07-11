@@ -44,19 +44,18 @@ class Event extends Model
         return $this->belongsTo(User::class, 'organizer_id');
     }
 
-    /**
-     * Get the speakers for this event.
-     */
-    public function speakers(): BelongsToMany
+    public function users(): BelongsToMany
     {
-        return $this->belongsToMany(User::class, 'event_speakers');
+        return $this->belongsToMany(User::class, 'event_user')->withPivot('role');
     }
 
-    /**
-     * Get the attendees for this event.
-     */
+    public function speakers(): BelongsToMany
+    {
+        return $this->users()->wherePivot('role', 'speaker');
+    }
+
     public function attendees(): BelongsToMany
     {
-        return $this->belongsToMany(User::class, 'event_attendees');
+        return $this->users()->wherePivot('role', 'attendee');
     }
 }
