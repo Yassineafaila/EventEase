@@ -23,8 +23,7 @@ class EventResource extends JsonResource
             'start_time' => $this->start_time,
             'end_time' => $this->end_time,
             'speakers' => UserResource::collection($this->speakers),
-            'attenders' => UserResource::collection($this->attendees),
-
+            'attendees' => UserResource::collection($this->attendees),
             'organizer' => new UserResource($this->whenLoaded('organizer')), // Example of including a related resource
             'created_at' => $this->created_at->format('Y-m-d H:i:s'),
             'updated_at' => $this->updated_at->format('Y-m-d H:i:s'),

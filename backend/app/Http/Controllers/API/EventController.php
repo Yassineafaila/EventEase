@@ -59,7 +59,7 @@ class EventController extends Controller
     public function show(Event $event)
     {
         // Find the event by ID
-        $event = Event::with("speakers")->find($event->id);
+        $event = Event::with("speakers", "attendees")->find($event->id);
 
         // Check if the event exists
         if (!$event) {
